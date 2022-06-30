@@ -1,0 +1,122 @@
+.navbar {
+  background-color: #131921;
+  /* background-color: #232f3e; */
+}
+
+.lower {
+  /* background-color: #37475a; */
+  background-color: #232f3e;
+}
+
+.nav-link {
+  color: #fff;
+
+}
+
+
+/* #37475a */
+
+.Homeicon {
+  max-width: 7rem;
+  min-width: 0.6rem;
+  height: 2rem;
+}
+.headIcon{
+  height: 1.9rem;
+} 
+
+.header_loc {
+  color: #fff;
+  /* outline: #fff; */
+}
+
+.header_search {
+  display: flex;
+  flex: 1;
+  /* align-items: flex-end; */
+  border-radius: 10px;
+  /* min-width: fit-content; */
+}
+
+.header_search_in {
+  /* max-width: 80em; */
+  min-width: 100%;
+  /* max-width: 45rem; */
+  height: 2.5rem;
+  padding: 1em;
+  margin-right: 0;
+  border: 0;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  outline: 0;
+}
+
+.header_searchIcon {
+
+  padding: 8px;
+  height: 1.5rem;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #febd69;
+
+}
+
+.offcanvas-header {
+  background-color: #232f3e;
+  color: white;
+}
+
+.user-circle {
+  height: 1.7rem;
+  cursor: pointer;
+}
+.user-circle2{
+  height: 1.3rem;
+  cursor: pointer;
+}
+
+.xmark {
+  height: 1.5rem;
+}
+
+.cart{
+  height: 1rem;
+}
+
+.navbar-toggler {
+  color: white;
+}
+.navbar-toggler-icon{
+  height: 1 rem;
+}
+
+.offcanvas-body {
+  text-align: left;
+}
+
+button{
+  font-size: small;
+}
+
+.headings{
+  font-weight: 620;
+}
+
+
+@media(max-width: 710){
+  .headIcon{
+    display: none;
+  }
+}
+
+@media (max-width: 1492px) and (min-width: 1200px) {
+  .header_search_in {
+    min-width: 80%;
+  }
+}
+
+@media (max-width: 298) {
+  .header_search_in {
+    min-width: 1rem;
+  }
+}

@@ -1,0 +1,19 @@
+
+.all-items{
+    margin: 10px;
+    /* flex-wrap: wrap; */
+}
+.cards{
+    /* max-width: 16rem;
+    min-width: 230px; */
+    margin: 0.6rem;
+    /* border-radius: 20px; */
+}
+.card-img{
+    /* width: 40px;  */
+    height: 20px;
+    /* height: 1rem; */
+    /* border-top-left-radius: 20px;
+    border-top-right-radius: 20px; */
+    cursor: pointer;
+}

@@ -1,0 +1,188 @@
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+/// DEFINING ----------------------------------------------------------------
+
+#define endl "\n"
+#define fastio ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+#define ll long long
+#define ull unsigned long long int
+#define ui unsigned int
+#define pb push_back
+#define ff first
+#define ss second
+#define all(v) v.begin(), v.end()
+#define total(arr, n) arr, arr+n
+#define getmax(v) *max__element(all(v))
+#define getmin(v) *min__element(all(v))
+#define setbits(n) __builtin_popcount(n)
+#define setp(n) fixed << setprecision(n)
+
+
+#define YES cout << "YES" << endl;
+#define NO cout << "NO" << endl;
+#define check(v) cout<<endl; for(auto x: v) cout << x << " "; cout << endl;
+
+// some short loops
+
+// 
+
+/// --------------------------------------------------------------------------
+
+
+/// VALUES -------------------------------------------------------------------
+
+const ll M = 1e9+7;
+
+/// --------------------------------------------------------------------------
+
+
+/// FUNCTIONS ----------------------------------------------------------------
+
+// No. of Factors
+ll no_of_factors(ll n){
+    ll c = 0, i;
+    for(i=1; i*i < n; i++){
+        if(n%i==0) c++;
+    }
+    if(i*i == n){
+        return 2*c + 1;
+    }
+    return 2*c;
+}
+
+// Check Prime
+bool isprime(ll n){
+    if(n==1 || n==4) 
+        return false;
+    else if(n==2 || n==3 || n==5)
+        return true;
+    else if (n % 2 == 0 || n % 3 == 0)
+        return false;
+    else{
+        for (ll i = 5; i * i <= n; i = i + 6)
+        if (n % i == 0 || n % (i + 2) == 0)
+            return false;  
+        return true;
+    }
+}
+/// CHECK PRIME LARGE ( Till 10^6 )
+vector<bool> primes(1000000, true);  // marking ( 0 - not prime and 1 - prime )
+void sieve(){
+    primes[0] = primes[1] = true;
+    for(int i=2; i*i <= 1000000; i++){
+        // started marking from first prime number and continues
+        if(primes[i] == true){
+            // marking starts from square of outer prime 
+            for(int j = i*i; j <= 1000000; j = j+i){
+                primes[j] = false;
+            }
+        }
+    }
+}
+// (In case of >10^9) - segmented sieve i.e, first 1-10^6 and 10^6 to next high
+// precompute and keep global in case of high values
+vector<int> segmentedprimes;
+void sieve2(ll n){
+    vector<bool> isprime(n+1, true);
+    // memset(isprime, true, sizeof(prime))
+    for(ll i=2; i*i <= n; i++){
+        // started marking from first prime number and continues
+        if(isprime[i] == true){
+            segmentedprimes.pb(i);
+            // marking starts from square of outer prime 
+            for(int j = i*i; j <= n; j = j+i){
+                isprime[j] = false;
+            }
+        }
+    }
+}
+void segmentedsieve(ll l, ll h){
+    ll sq = sqrt(h);
+    sieve2(h);
+    vector<bool> isprime(l+h-1, true);
+    for(ll p: segmentedprimes){
+        ll leastmultiple = (l/p)*p;
+        if(leastmultiple < l){
+            leastmultiple = leastmultiple + p;
+        }
+        for(ll idx = leastmultiple; idx <= h; idx = idx + p){
+            isprime[idx - l] = false;
+        }
+    }    
+    // NOW SECOND SEGMENT PRIMES ARE IN isprime vector
+    // check for isprime[num - l];
+}
+
+///
+
+
+// Check Square Number
+bool issquare(ll n){
+    return ceil( (double)sqrt((double)n) ) == floor( (double)sqrt((double)n) );
+}
+
+// Check Power of 2
+bool is2power(ll n){
+    if(n==1)
+        return true;
+    else 
+        return ceil( (double)log2((double)n) ) == floor( (double)log2((double)n) );
+}
+
+
+/// --------------------------------------------------------------------------
+
+
+/// --------------------------------------------------------------------------
+    // BASIC **
+    // (1) Try to solve for small values in case of patterns or bitwise numbers
+    // may be like 2-3 for loops for small values to identify patterns in 
+    //numbers (mainly prob. and combinations).
+    
+    // (2) Check for edges like pointer reaching the end counting or checking 
+    // for answers.
+
+/// --------------------------------------------------------------------------
+
+
+/// SOLVE --------------------------------------------------------------------
+void solve(){
+    
+    // vector<int> v = {1,2,2,3,3,3,3,1,2,1};
+    // auto itr = unique(v.begin(), v.end());
+    // v.resize(distance(v.begin(), itr));
+    
+    
+    
+    
+    
+}
+/// --------------------------------------------------------------------------
+
+
+int main() {
+    fastio
+	ll t;
+	cin >> t;
+	while(t--){
+	    solve();
+	}
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//// G.S.K ///---------------------------------------------------------------- ///
