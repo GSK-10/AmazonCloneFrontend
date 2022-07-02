@@ -60,6 +60,7 @@ import LoginUser from '../Login/LoginUser'
 import CreateUser from '../Login/CreateUser';
 
 import CardsView from '../../Routes/CardsView/CardsView'
+import EachProduct from '../EachProduct.js/EachProduct';
 
 import icon from '../../Images/logo.png'
 import icon1 from '../../Images/headPart.jpg'
@@ -112,14 +113,7 @@ function Header() {
             let response = await axios.put(`http://localhost:8090/Users/${loggedInUser[0].id}`, data);
             console.log(response)
         }
-        // else {
-        // 	// let data = { ...loggedInUser[0], cart: [] }
-        // 	// let response1 = await axios.put(`http://localhost:8000/users/${loggedInUser[0].id}`, data);
-        // 	let data1 = { ...loggedInUser[0], cart: [...loggedInUser[0].cart, ...cartitems.data] }
-        // 	let response2 = await axios.put(`http://localhost:8000/users/${loggedInUser[0].id}`, data1);
-        // 	// console.log(response1)
-        // 	console.log(response2)
-        // }
+        
         console.log(cartitems)
         cartitems.data.map((element) => {
             console.log(element)
@@ -179,6 +173,7 @@ function Header() {
                                         Cart &nbsp;<FontAwesomeIcon icon={faCartShopping} className="cart" /> &nbsp;
                                         <span className="translate-middle badge rounded-pill bg-danger text-center " style={{ height: "1.1rem", width: "1rem", fontSize: "0.6rem", padding: "0.2rem" }}>
                                             {noOfItemsInCart}
+                                            
                                         </span>
                                         {/* <span className="position-absolute top-2 start-10 translate-middle badge rounded-pill bg-danger">
                                             {noOfItemsInCart}
@@ -354,6 +349,7 @@ function Header() {
                     <Route path="CreateUser" element={<CreateUser />} />
 
                     <Route path='CardsView' element={<CardsView />} />
+                    <Route path='/:name/:id' element={<EachProduct />} />
 
                 </Routes>
 

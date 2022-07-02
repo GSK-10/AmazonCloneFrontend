@@ -534,11 +534,6 @@
       "img": "https://images-na.ssl-images-amazon.com/images/G/31/img22/Electronics/Re-Vamp/Halo/300x300_helo_Routers._CB636489469_.jpg",
       "available": "true"
     },
-
-
-
-
-    
     {
       "id": 71,
       "pid": 1,
@@ -649,11 +644,6 @@
       "img": "https://images-na.ssl-images-amazon.com/images/G/31/img22/Fashion/Event/EOSS/AFpage/halos/7._SS300_QL85_.png",
       "available": "true"
     },
-
-
-
-
-
     {
       "id": 81,
       "pid": 1,
@@ -731,11 +721,6 @@
       "img": "https://images-na.ssl-images-amazon.com/images/G/31/img21/OHL_HMT/VERNAC/SBC_EN_REC_420x420/440x440_6._SS400_QL85_.jpg",
       "available": "true"
     },
-
-
-
-
-
     {
       "id": 88,
       "pid": 1,
@@ -802,13 +787,6 @@
       "img": "https://images-na.ssl-images-amazon.com/images/G/31/img22/Beauty/EOSS/June/Halos/Halos-01._SS300_QL85_.jpg",
       "available": "true"
     },
-
-
-
-
-
-
-
     {
       "id": 94,
       "pid": 1,
@@ -875,11 +853,6 @@
       "img": "https://images-na.ssl-images-amazon.com/images/G/31/img22/Sports/Feb/CLP_Revamp/SubNav/Indoor-sports._SS400_QL85_.jpg",
       "available": "true"
     },
-
-
-
-
-
     {
       "id": 100,
       "pid": 1,
@@ -947,9 +920,6 @@
       "available": "true"
     }
   ],
-
-
-
   "Electronics": [
     {
       "id": 106,
@@ -1017,83 +987,73 @@
       "img": "https://m.media-amazon.com/images/I/91U5Ler19jL._SX466_.jpg",
       "available": "true"
     },
-
-
-
-
-
     {
-        "id": 112,
-        "pid": 1,
-        "category": "Desktops",
-        "name": "HP All in One 27-inch (68.6 cm) FHD Desktop PC 4th Gen Ryzen 5 4500U Processor (8GB/512GB SSD/Facial Recognition IR Camera/Windows 10/MS Office 2019/Alexa Built-in), 27-dp0555in, Silver",
-        "price": 66900,
-        "mrp": 79000,
-        "origin": "",
-        "img": "https://m.media-amazon.com/images/I/61aGQ9d2fOS._SX466_.jpg",
-        "available": "true"
-      },
-      {
-        "id": 113,
-        "pid": 2,
-        "category": "Desktops",
-        "name": "Lenovo IdeaCentre A340 Touchscreen 23.8-inch Full HD IPS All-in-One Desktop (Intel Core i5-10210U/16GB/512GB SSD/Windows 11/MS Office 2021/HD 720p Camera/Wireless Keyboard & Mouse/Black)",
-        "price": 66200,
-        "mrp": 87390,
-        "origin": "",
-        "img": "https://m.media-amazon.com/images/I/811zyFsMcoL._SX466_.jpg",
-        "available": "true"
-      },
-      {
-        "id": 114,
-        "pid": 3,
-        "category": "Desktops",
-        "name": "Lenovo IdeaCentre AIO 3 AMD Ryzen 7 5700U 23.8inch FHD IPS 3-Side Edgeless All-in-One Desktop with Alexa Built-in (8GB/512GB SSD/Win11/MS Office 2021/HD 720p Camera/Wireless Keyboard & Mouse)",
-        "price": 60990,
-        "mrp": 82390,
-        "origin": "",
-        "img": "https://m.media-amazon.com/images/I/81EZ51fQoVL._SX466_.jpg",
-        "available": "true"
-      },
-      {
-        "id": 115,
-        "pid": 4,
-        "category": "Desktops",
-        "name": "Lenovo IdeaCentre AIO 3 21.5 inches Full HD IPS All-in-One Desktop (AMD Ryzen 3/8GB/1TB HDD/Windows 10/Integrated AMD Radeon Graphics/HD 720p Camera/Wireless Keyboard, Mouse), Foggy White",
-        "price": 53900,
-        "mrp": 64900,
-        "origin": "",
-        "img": "https://m.media-amazon.com/images/I/81XxfD6a3PL._SX466_.jpg",
-        "available": "true"
-      },
-      {
-        "id": 116,
-        "pid": 5,
-        "category": "Desktops",
-        "name": "HP All-in-One AMD Ryzen 3-3250U 22-inch(54.6 cm) FHD Desktop(4GB/1TB HDD/Win 11/MS Office 2019/AMD Radeon Graphics), 22-dd0201in, Jet Black",
-        "price": 37499,
-        "mrp": 55000,
-        "origin": "",
-        "img": "https://m.media-amazon.com/images/I/81pSrz0gw2L._SX466_.jpg",
-        "available": "true"
-      },
-      {
-        "id": 117,
-        "pid": 6,
-        "category": "Desktops",
-        "name": "HP All in One PC 27-Inch FHD IPS AMD Ryzen 7 4700U Computer with Alexa Built-in (16GB/1TB/PCIe NVMe M.2 SSD/Windows 10 Home/MS Office 2019, 27-dp1222in, Silver)",
-        "price": 104900,
-        "mrp": 125000,
-        "origin": "",
-        "img": "https://m.media-amazon.com/images/I/71hjDp7Ae2L._SX466_.jpg",
-        "available": "true"
-      }
-
-
+      "id": 112,
+      "pid": 1,
+      "category": "Desktops",
+      "name": "HP All in One 27-inch (68.6 cm) FHD Desktop PC 4th Gen Ryzen 5 4500U Processor (8GB/512GB SSD/Facial Recognition IR Camera/Windows 10/MS Office 2019/Alexa Built-in), 27-dp0555in, Silver",
+      "price": 66900,
+      "mrp": 79000,
+      "origin": "",
+      "img": "https://m.media-amazon.com/images/I/61aGQ9d2fOS._SX466_.jpg",
+      "available": "true"
+    },
+    {
+      "id": 113,
+      "pid": 2,
+      "category": "Desktops",
+      "name": "Lenovo IdeaCentre A340 Touchscreen 23.8-inch Full HD IPS All-in-One Desktop (Intel Core i5-10210U/16GB/512GB SSD/Windows 11/MS Office 2021/HD 720p Camera/Wireless Keyboard & Mouse/Black)",
+      "price": 66200,
+      "mrp": 87390,
+      "origin": "",
+      "img": "https://m.media-amazon.com/images/I/811zyFsMcoL._SX466_.jpg",
+      "available": "true"
+    },
+    {
+      "id": 114,
+      "pid": 3,
+      "category": "Desktops",
+      "name": "Lenovo IdeaCentre AIO 3 AMD Ryzen 7 5700U 23.8inch FHD IPS 3-Side Edgeless All-in-One Desktop with Alexa Built-in (8GB/512GB SSD/Win11/MS Office 2021/HD 720p Camera/Wireless Keyboard & Mouse)",
+      "price": 60990,
+      "mrp": 82390,
+      "origin": "",
+      "img": "https://m.media-amazon.com/images/I/81EZ51fQoVL._SX466_.jpg",
+      "available": "true"
+    },
+    {
+      "id": 115,
+      "pid": 4,
+      "category": "Desktops",
+      "name": "Lenovo IdeaCentre AIO 3 21.5 inches Full HD IPS All-in-One Desktop (AMD Ryzen 3/8GB/1TB HDD/Windows 10/Integrated AMD Radeon Graphics/HD 720p Camera/Wireless Keyboard, Mouse), Foggy White",
+      "price": 53900,
+      "mrp": 64900,
+      "origin": "",
+      "img": "https://m.media-amazon.com/images/I/81XxfD6a3PL._SX466_.jpg",
+      "available": "true"
+    },
+    {
+      "id": 116,
+      "pid": 5,
+      "category": "Desktops",
+      "name": "HP All-in-One AMD Ryzen 3-3250U 22-inch(54.6 cm) FHD Desktop(4GB/1TB HDD/Win 11/MS Office 2019/AMD Radeon Graphics), 22-dd0201in, Jet Black",
+      "price": 37499,
+      "mrp": 55000,
+      "origin": "",
+      "img": "https://m.media-amazon.com/images/I/81pSrz0gw2L._SX466_.jpg",
+      "available": "true"
+    },
+    {
+      "id": 117,
+      "pid": 6,
+      "category": "Desktops",
+      "name": "HP All in One PC 27-Inch FHD IPS AMD Ryzen 7 4700U Computer with Alexa Built-in (16GB/1TB/PCIe NVMe M.2 SSD/Windows 10 Home/MS Office 2019, 27-dp1222in, Silver)",
+      "price": 104900,
+      "mrp": 125000,
+      "origin": "",
+      "img": "https://m.media-amazon.com/images/I/71hjDp7Ae2L._SX466_.jpg",
+      "available": "true"
+    }
   ],
-
-
-
   "Mobiles": [],
   "Fashion": [],
   "Home": [],
@@ -1105,7 +1065,8 @@
   "Gifts": [],
   "Recharge": [],
   "AmazonPay": [],
-  "Cart": [],
+  "Cart": [
+  ],
   "CurrentLoggedInUser": [],
   "Users": [
     {

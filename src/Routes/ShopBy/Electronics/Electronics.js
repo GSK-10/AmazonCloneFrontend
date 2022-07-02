@@ -108,7 +108,7 @@ function Electronics() {
 
                 <SwiperSlide key={key} >
 
-                  <Link className="card cm mb-5 text-start" to={`/${data.category}/${data.id}`} >
+                  <Link className="card cm mb-5 text-start" to={`/Electronics/${data.id}`} >
 
                     <img src={data.img} alt="" className='img img-fluid img-fluid rounded p-4 pb-2 pt-2 mt-1' />
                     <div className="card-body ellipsis">
@@ -254,7 +254,7 @@ function Electronics() {
 
                 <SwiperSlide key={key} >
 
-                  <Link className="card cm mb-5 text-start" to={`/${data.category}/${data.id}`}>
+                  <Link className="card cm mb-5 text-start" to={`/Electronics/${data.id}`}>
 
                     <img src={data.img} alt="" className='img img-fluid img-fluid rounded p-4 pb-2 pt-2 mt-1' />
                     <div className="card-body ellipsis">
