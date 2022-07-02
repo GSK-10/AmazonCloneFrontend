@@ -42,6 +42,30 @@ import {BrowserRouter} from 'react-router-dom';
 		npm install swiper
 
 
+	GIT COMMANDS **************************
+	
+	first 
+	git init
+
+	git remote add origin <url>
+		here origin is short name for <url>
+	git remove remove <shortname> 
+	git remove -v 
+		to check to what it is connected
+
+
+	git add .
+for checking --> git status
+	
+
+	after tracking 
+	git commit -m "comments"
+	git push -u origin master 
+
+	***************************************
+
+
+
 
 const Access = [
         {

@@ -154,14 +154,14 @@ function Home() {
 
                                     <Link className="cd mb-5" to="/Electronics">
 
-                                        <img src={data.img} alt="" className='img img-fluid img-fluid rounded p-4 pb-2' />
+                                        <img src={data.img} alt="" className='img img-fluid img-fluid rounded p-4 pb-1 pt-2 mt-2' />
                                         {/* <div className="card-body ">
                                             <p className='pb-2'> <FontAwesomeIcon icon={faIndianRupee} className="Rupee" > </FontAwesomeIcon>
                                                 {data.price}.00 </p>
                                             <h6 className="ct card-title "> </h6>
 
                                         </div> */}
-                                        <h6> {data.name}</h6>
+                                        <h6 className='mt-2'> {data.name}</h6>
 
                                     </Link>
 
@@ -212,14 +212,14 @@ function Home() {
 
                                     <Link className="cd mb-5" to="/Fashion">
 
-                                        <img src={data.img} alt="" className='img img-fluid rounded card-img-top p-4' />
+                                        <img src={data.img} alt="" className='img img-fluid rounded card-img-top p-4 mt-2 pb-0 pt-2' />
                                         {/* <div className="card-body ">
                                             <p className='pb-2'> <FontAwesomeIcon icon={faIndianRupee} className="Rupee" > </FontAwesomeIcon>
                                                 {data.price}.00 </p>
                                             <h6 className="ct card-title "> </h6>
 
                                         </div> */}
-                                        <h6> {data.name}</h6>
+                                        <h6 className='mt-2'> {data.name}</h6>
                                         {/* <h6> Shop now </h6> */}
 
                                     </Link>
@@ -297,7 +297,7 @@ function Home() {
 
                                     <Link className="cd mb-5" to="/Kitchen">
 
-                                        <img src={data.img} alt="" className='img img-fluid img-fluid rounded p-4 pb-2' />
+                                        <img src={data.img} alt="" className='img img-fluid img-fluid rounded p-4 pb-2 pt-2 mt-3' />
                                         {/* <div className="card-body ">
                         <p className='pb-2'> <FontAwesomeIcon icon={faIndianRupee} className="Rupee" > </FontAwesomeIcon>
                             {data.price}.00 </p>
@@ -357,8 +357,8 @@ function Home() {
 
                                     <Link className="cd mb-5" to="/BeautyHealth">
 
-                                        <img src={data.img} alt="" className='img img-fluid img-fluid rounded p-4 pb-2' />
-                                        <h6> {data.name}</h6>
+                                        <img src={data.img} alt="" className='img img-fluid img-fluid rounded p-4 pb-0 pt-2 mt-3' />
+                                        <h6 className='mt-2'> {data.name}</h6>
 
                                     </Link>
 
@@ -410,7 +410,7 @@ function Home() {
 
                                     <Link className="cd mb-5" to="/Sports">
 
-                                        <img src={data.img} alt="" className='img img-fluid img-fluid rounded p-4 pb-2' />
+                                        <img src={data.img} alt="" className='img img-fluid img-fluid rounded p-4 pb-2 pt-2 mt-3' />
                                         <h6> Shop now </h6>
 
                                     </Link>
@@ -464,7 +464,7 @@ function Home() {
 
                                     <Link className="cd mb-5" to="/MoviesMusicGames">
 
-                                        <img src={data.img} alt="" className='img img-fluid img-fluid rounded p-4 pb-2' />
+                                        <img src={data.img} alt="" className='img img-fluid img-fluid rounded p-4 pb-2 pt-2 mt-3' />
                                         <h6> {data.name}</h6>
 
                                     </Link>

@@ -59,7 +59,7 @@ a {
 
 .cd {
     /* width: 200px !important; */
-    /* height: 250px; */
+    height: 250px;
     min-width: 14rem;
     box-shadow: 0px 0px 50px lightgray;
 }

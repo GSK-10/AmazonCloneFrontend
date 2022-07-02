@@ -14,10 +14,13 @@
 }
 
 
-.cd {
+.cw {
+    /* min-width: 14rem; */
+    /* height: 22rem; */
+    width: 200px !important;
+    height: 370px;
     min-width: 14rem;
-    height: 22rem;
-    box-shadow: 0px 0px 50px lightgray;
+    box-shadow: 0px 0px 60px lightgray;
 }
 
 .ct {
