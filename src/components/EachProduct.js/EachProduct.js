@@ -41,21 +41,21 @@ function EachProduct() {
         let response = await axios.get(`http://localhost:8090/Cart/${data.id}`);
         let updatedQty = response.data.qty
         let response1 = await axios.put(`http://localhost:8090/Cart/${data.id}`, { ...response.data, qty: updatedQty + 1 })
-        console.log(updatedQty + 1);
+        console.log(response1.data.qty);
         navigate("/Cart");
     }
 
-    const sendCartItemsToUsersAccount = async () => {
-        let currentUser = await axios.get("http://localhost:8090/CurrentLoggedInUser")
-        let cartItems = await axios.get("http://localhost:8090/Cart");
-        let userData = { ...currentUser.data[0], cart: [...cartItems.data] };
-        let postdata = await axios.put(`http://localhost:8090/Users/${currentUser.data[0].id}`, userData);
-    }
+    // const sendCartItemsToUsersAccount = async () => {
+    //     let currentUser = await axios.get("http://localhost:8090/CurrentLoggedInUser")
+    //     let cartItems = await axios.get("http://localhost:8090/Cart");
+    //     let userData = { ...currentUser.data[0], cart: [...cartItems.data] };
+    //     let postdata = await axios.put(`http://localhost:8090/Users/${currentUser.data[0].id}`, userData);
+    // }
 
     const postData = async (data) => {
         data.qty = 1;
         await axios.post(`http://localhost:8090/Cart`, data)
-        sendCartItemsToUsersAccount();
+        // sendCartItemsToUsersAccount();
         navigate("/Cart");
         console.log("post : ", data)
         window.location.reload()
@@ -70,11 +70,12 @@ function EachProduct() {
             console.log(currentUser.data.length);
         }
         else {
+
             let found = false;
             let response = await axios.get(`http://localhost:8090/Cart`);
 
             // let cartItems = response.data;
-            response.data.forEach((element) => {
+            response.data.map((element) => {
                 if (element.id === data.id) {
                     updateQuantity(data);
                     found = true;

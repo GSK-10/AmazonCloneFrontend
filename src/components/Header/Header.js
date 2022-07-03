@@ -116,14 +116,16 @@ function Header() {
             let response = await axios.put(`http://localhost:8090/Users/${loggedInUser[0].id}`, data);
             console.log(response)
         }
+        
         else{
+
             let data = {...loggedInUser[0], cart: [] }
             let response1 = await axios.put(`http://localhost:8090/Users/${loggedInUser[0].id}`, data);
 
             let data1 = {...loggedInUser[0], cart: cartitems.data}
             let response2 = await axios.put(`http://localhost:8090/Users/${loggedInUser[0].id}`, data1);
-
         }
+
         let cartitems1 = await axios.get("http://localhost:8090/Cart");
         console.log(cartitems1)
         cartitems1.data.map((element) => {
@@ -132,7 +134,6 @@ function Header() {
         })
 
     }
-
 
     const logOut = async () => {
         let response = await axios.get("http://localhost:8090/CurrentLoggedInUser")

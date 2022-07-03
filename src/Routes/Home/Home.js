@@ -103,9 +103,66 @@ function Home() {
         fetchUsers()
     }, [])
 
-    useEffect( () => {
-		Aos.init( { duration: 2000 } );
-	} , []);
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, []);
+
+
+    const [usercart, setCart] = useState([]);
+
+    useEffect(() => {
+        fetchCartItems()
+    }, [])
+
+
+
+    const loop = async (product) => {
+        console.log(product)
+        await axios.post("http://localhost:8090/Cart", product);
+    }
+
+    const post = async (data) => {
+        let currentUser = await axios.get("http://localhost:8090/CurrentLoggedInUser")
+        console.log(data)
+
+        // let data2 = data;
+
+        data.map((product) => {
+            loop(product);
+        })
+        // console.log(Cart.data)
+    }
+
+
+    const postData1 = async (Data) => {
+
+        let cartItems = Data[0].cart;
+        console.log(cartItems.length)
+
+        if (cartItems.length > 0) {
+            post(cartItems);
+        }
+    }
+
+
+    const postDataToCart = async () => {
+        let currentUser = await axios.get("http://localhost:8090/CurrentLoggedInUser")
+        let Data = currentUser.data;
+        postData1(Data)
+    }
+
+
+    const fetchCartItems = async () => {
+        let response1 = await axios.get("http://localhost:8090/CurrentLoggedInUser")
+        let Data = response1.data;
+        // console.log(Data)
+
+        if (Data[0].cart.length > 0) {
+            postDataToCart();
+            // postData();
+        }
+        // sendCartItemsToUsersAccount();
+    }
 
 
 
@@ -284,7 +341,7 @@ function Home() {
                 </div>
 
                 {/* slider - 3 */}
-                <div data-aos="fade-up"  className='bg-white '>
+                <div data-aos="fade-up" className='bg-white '>
 
                     <h4 className='me-auto mb-4 mt-3 headings'> Home and Kitchen </h4>
                     <Swiper
@@ -364,7 +421,7 @@ function Home() {
 
 
                 {/* slider - 4 */}
-                <div  data-aos="fade-up" className='bg-white '>
+                <div data-aos="fade-up" className='bg-white '>
 
                     <h4 className='me-auto mb-4 mt-3 headings'> Beauty and Health </h4>
                     <Swiper
