@@ -1092,7 +1092,32 @@
       "email": "naruto@gmail.com",
       "username": "naruto.65",
       "password": "narutoworld",
-      "cart": [],
+      "cart": [
+        {
+          "id": 112,
+          "pid": 1,
+          "category": "Desktops",
+          "name": "HP All in One 27-inch (68.6 cm) FHD Desktop PC 4th Gen Ryzen 5 4500U Processor (8GB/512GB SSD/Facial Recognition IR Camera/Windows 10/MS Office 2019/Alexa Built-in), 27-dp0555in, Silver",
+          "price": 66900,
+          "mrp": 79000,
+          "origin": "",
+          "img": "https://m.media-amazon.com/images/I/61aGQ9d2fOS._SX466_.jpg",
+          "available": "true",
+          "qty": 1
+        },
+        {
+          "id": 109,
+          "pid": 4,
+          "category": "Laptops",
+          "name": "Acer Nitro 5 Amd Ryzen 7 5800H/15.6 Inches Fhd Ips Display Gaming Laptop (16 Gb/256 Gb Ssd/1Tb Hdd/Windows 10 Home/6 Gb Graphics/Nvidia Geforce Rtx 3060/144 Hz,Shale Black, 2.4 Kg)",
+          "price": 82000,
+          "mrp": 98000,
+          "origin": "",
+          "img": "https://images-eu.ssl-images-amazon.com/images/I/41xyIeqg8mL._SX300_SY300_QL70_FMwebp_.jpg",
+          "available": "true",
+          "qty": 2
+        }
+      ],
       "id": 4
     },
     {
