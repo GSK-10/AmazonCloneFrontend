@@ -5,6 +5,18 @@ import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Pagination, Navigation } from "swiper";
+import { Link, Routes, Route, NavLink } from 'react-router-dom'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faIndianRupee } from '@fortawesome/free-solid-svg-icons';
+
+import offers from '../../Images/offers.png'
+
 
 function EachProduct() {
 
@@ -14,10 +26,10 @@ function EachProduct() {
 
     const getProduct = async () => {
         let response = await axios.get(`http://localhost:8090/${name}/${id}`);
-        console.log(response)
+        // console.log(response)
         let productList = response.data;
         setProduct(productList);
-        console.log(productList)
+        // console.log(productList)
     }
 
     useEffect(() => {
@@ -29,7 +41,8 @@ function EachProduct() {
         let response = await axios.get(`http://localhost:8090/Cart/${data.id}`);
         let updatedQty = response.data.qty
         let response1 = await axios.put(`http://localhost:8090/Cart/${data.id}`, { ...response.data, qty: updatedQty + 1 })
-        navigate("/cart");
+        console.log(updatedQty + 1);
+        navigate("/Cart");
     }
 
     const sendCartItemsToUsersAccount = async () => {
@@ -43,78 +56,198 @@ function EachProduct() {
         data.qty = 1;
         await axios.post(`http://localhost:8090/Cart`, data)
         sendCartItemsToUsersAccount();
-        navigate("/cart");
+        navigate("/Cart");
         console.log("post : ", data)
         window.location.reload()
     }
 
     const getData = async (data) => {
-        let found = false;
-        let response = await axios.get(`http://localhost:8090/Cart`);
-        // let cartItems = response.data;
-        response.data.forEach((element) => {
-            if (element.id === data.id) {
-                updateQuantity(data);
-                found = true;
-                // break;
-            }
-        })
-        if (found === false)
-            postData(data);
 
-        navigate("/cart");
-        window.location.reload()
+        let currentUser = await axios.get("http://localhost:8090/CurrentLoggedInUser")
+
+        if (currentUser.data.length === 0) {
+            navigate('/LoginUser')
+            console.log(currentUser.data.length);
+        }
+        else {
+            let found = false;
+            let response = await axios.get(`http://localhost:8090/Cart`);
+
+            // let cartItems = response.data;
+            response.data.forEach((element) => {
+                if (element.id === data.id) {
+                    updateQuantity(data);
+                    found = true;
+                }
+            })
+            if (found === false)
+                postData(data);
+
+            navigate("/Cart");
+            window.location.reload()
+        }
+
+
     }
 
 
     return (
         <>
 
-            <h3>EachProduct</h3>
+            {/* <h3>EachProduct</h3> */}
 
-            <div className='container'>
-            <div className="row mb-5">
-                {product.name === "undefined" && <p className="text-warning">Product Loading</p>}
-                <div className="col-lg-6 col-md-6 col-sm-12">
-                    <img className='img-fluid rounded w-50' src={product.img} alt={product.name} />
-                </div>
-                <div className="col-sm-12 col-md-6 col-lg-6">
-                    <p className='text h5'>{product.name}</p>
-                    <hr />
-                    <div className='h6'>Best Price* <span className='h5 ' style={{ color: "#EF4281" }}>₹ {product.price}</span> </div>
-                    <div>Mrp:
-                        <span className='text-decoration-line-through'>
-                            ₹ {product.mrp}
-                        </span>
-                        {product.mrp !== product.price && <span className='mx-2 text-uppercase fw-bold h6' style={{ color: "#45923F" }}>get {(((product.mrp - product.price) / product.mrp) * 100).toPrecision(2)}% off</span>}
-                        <div className='mt-1 text-muted'>(Inclusive of all taxes)</div>
-                    </div>
-                    <div className='mt-1 text-muted'>
-                        <div className='fst-italic'>* Mkt: {product.manufracture}</div>
-                        <div>* Origin: {product.origin}</div>
-                        <div className='fst-italic'>* Delivery charges if applicable will be applied at checkout</div>
-                    </div>
+            <div className='container mt-4'>
+
+                {
+                    isNaN(product.id) == true &&
                     <div>
-                        <button onClick={() => getData(product)} className="mt-1 btn fw-bold text-uppercase" style={{ backgroundColor: "#24AEB1", color: "white" }}>Add To Cart</button>
+                        <h5> user account </h5>
                     </div>
-                    <div className='mt-5'>
-                        <p className='text-muted h5 text-uppercase mb-3'>Offers Applicable</p>
-                        <div className='row w-100' style={{ backgroundColor: "#F3F3F3" }}>
-                            <div className='col-2 mt-3 '>
-                                <img className='img-thumbnail rounded mb-3' style={{ width: "50px" }} src="https://www.netmeds.com/assets/version1653998784/gloryweb/images/icons/offer_blue_outline.svg" alt="" />
+                }
+
+                {
+                    isNaN(product.id) == false &&
+                    <div>
+
+                        <div className="row mb-5 m-4 mt-2">
+
+                            {product.name === "undefined" && <p className="text-warning">Product Loading... </p>}
+                            <div className="col-lg-6 col-md-6 col-sm-12 text-center p-3 part1">
+                                <img className='rounded w-75 text-center' src={product.img} alt={product.name} />
                             </div>
-                            <div className="col-7 mt-3">
-                                <p className='h6'>Default Discount</p>
-                                <p className='h6' style={{ color: "#45923F" }}>You get {(((product.mrp - product.price) / product.mrp) * 100).toPrecision(2)}% OFF on this product</p>
+
+
+                            <div className="col-sm-12 col-md-6 col-lg-6 p-3">
+                                <p className="ct" style={{ fontSize: "1.4rem", fontWeight: "500" }}> {product.name} </p>
+                                <hr />
+
+                                <div className='text-muted mb-0'>
+                                    {/* <span className='fw-bold' style={{ color: "#EF4482" }}> */}
+
+                                    {/* {data.mrp !== data.price && <h5 className='mx-2 mt-2 badge text-uppercase fw-small' style={{ backgroundColor: "#84BE52", position: "fixed" }}>{(((data.mrp - data.price) / data.mrp) * 100).toPrecision(2)}%off</h5>} */}
+                                    {
+                                        product.mrp !== product.price &&
+                                        <div className='mb-0'>
+
+                                            <h5 className='mx-2 mt-2 text-uppercase fw-small' style={{ backgroundColor: "#fff" }}>
+                                                <span className='text-danger' style={{ fontSize: "1.4rem" }}> (-{(((product.mrp - product.price) / product.mrp) * 100).toPrecision(2)}%)  </span>
+                                                {/* &nbsp; */}
+                                                <span className='text-dark' style={{ fontSize: "1.6rem" }}>
+                                                    <FontAwesomeIcon icon={faIndianRupee} className="Rupee pb-2" style={{ height: "0.7rem" }} />{product.price}.00 </span>
+                                            </h5>
+
+                                            <div className='text-muted ms-2' style={{ fontSize: "0.8rem", fontWeight: "500" }}>
+                                                M.R.P:
+                                                <span className='px-2 text-decoration-line-through'>
+                                                    ₹{product.mrp}.00
+                                                </span>
+
+                                            </div>
+                                        </div>
+
+                                    }
+                                    {
+                                        product.mrp === product.price &&
+                                        <div className='mb-0'>
+                                            <h5>
+                                                {product.price}
+                                            </h5>
+                                            <div className='text-muted' style={{ fontSize: "0.6rem" }} >
+                                                M.R.P:
+                                                <span className='px-2 text-decoration-line-through'>
+                                                    ₹{product.mrp}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    }
+
+                                </div>
+
+                                <div class="mt-0 pt-0 mb-0">
+                                    <img class="mt-0 pt-0 mb-0" style={{ height: "28px", width: "60px" }} src="https://i0.wp.com/thestronghomemaker.com/wp-content/uploads/2022/06/amazon-prime-delivery-checkmark._CB659998231_.png?resize=621%2C260&ssl=1" />
+                                </div>
+
+                                <div className='mt-1 text-muted'>
+                                    <div className='fst-italic'> <small> &nbsp; Inclusive of all taxes </small> </div>
+                                    <div className='mb-2'> <small> &nbsp; No Cost EMI available </small>  </div>
+
+                                    <div className='text-center mt-4' style={{ fontSize: "1rem" }}>
+                                        <button className="btn w-75 text-center p-1" onClick={() => getData(product)} style={{ backgroundColor: "#ffd814", color: "black", borderRadius: "25px", fontSize: "1rem" }}> Add To Cart </button>
+                                    </div>
+
+                                </div>
+
                             </div>
-                            <span className='col-3 mt-3' style={{ color: "#EF4281" }}>Offer Applied</span>
+
                         </div>
+
+                        <div>
+                            <div className='mt-3'>
+                                <p className='text h5 mb-1'>
+                                    <span>
+                                        <img className='' style={{ height: "25px", width: "25px" }} src={offers} />
+                                    </span> Offers
+                                </p>
+
+                                <div className='card-group m-2 mt-1'>
+                                    <div className='p-2 shadow card m-2 pb-0 rounded'>
+                                        <h6> Bank offers </h6>
+                                        <small className='text-start' style={{ fontSize: "0.7rem" }}>
+                                            <p>
+                                                Upto ₹1,750.00 discount on select Credit Cards, Citi Debit Cards
+                                            </p>
+                                            <p className='' style={{ cursor: "pointer" }}>
+                                                See more
+                                            </p>
+                                        </small>
+                                    </div>
+
+
+                                    <div className='p-2 shadow card m-2 rounded'>
+                                        <h6> No Cost EMI </h6>
+                                        <small className='text-start' style={{ fontSize: "0.7rem" }}>
+                                            <p>
+                                                Upto ₹3,362.90 EMI interest savings on Amazon Pay ICICI Bank Credit Cards
+                                            </p>
+                                            <p>
+                                                See more
+                                            </p>
+                                        </small>
+                                    </div>
+
+                                    <div className='p-2 shadow card m-2 rounded'>
+                                        <h6> Buy more Save more </h6>
+                                        <small className='text-start' style={{ fontSize: "0.7rem" }}>
+                                            <p>
+                                                Get ₹30.00 back for every eligible item purchased with this item
+                                                {/* <br /> */}
+                                            </p>
+                                            <p>
+                                                See more
+                                            </p>
+                                        </small>
+                                    </div>
+                                    <div className='p-2 shadow card m-2 rounded'>
+                                        <h6> Partner offers </h6>
+                                        <small className='text-start' style={{ fontSize: "0.7rem" }}>
+                                            <p>
+                                                Get GST invoice and save up to 28% on business purchases. sign up for free
+                                            </p>
+                                            <p>
+                                                See more
+                                            </p>
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                </div>
+                }
+
+
+
             </div>
-        </div>
-
-
 
         </>
 

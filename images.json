@@ -1065,9 +1065,43 @@
   "Gifts": [],
   "Recharge": [],
   "AmazonPay": [],
-  "Cart": [
+  "Cart": [],
+  "CurrentLoggedInUser": [
+    {
+      "name": "naruto",
+      "phoneno": "99988776655",
+      "email": "naruto@gmail.com",
+      "username": "naruto.65",
+      "password": "narutoworld",
+      "cart": [
+        {
+          "id": 108,
+          "pid": 3,
+          "category": "Laptops",
+          "name": "Lenovo Legion 5 AMD Ryzen 7 5800H 15.6inch VIDIA RTX 3060/165Hz/Windows 11/Office 2021/RGB Backlit/3months Game Pass/Phantom Blue/2.4Kg)",
+          "price": 89000,
+          "mrp": 99999,
+          "origin": "",
+          "img": "https://m.media-amazon.com/images/I/61Er61SxBhL._SX522_.jpg",
+          "available": "true",
+          "qty": 1
+        },
+        {
+          "id": 109,
+          "pid": 4,
+          "category": "Laptops",
+          "name": "Acer Nitro 5 Amd Ryzen 7 5800H/15.6 Inches Fhd Ips Display Gaming Laptop (16 Gb/256 Gb Ssd/1Tb Hdd/Windows 10 Home/6 Gb Graphics/Nvidia Geforce Rtx 3060/144 Hz,Shale Black, 2.4 Kg)",
+          "price": 82000,
+          "mrp": 98000,
+          "origin": "",
+          "img": "https://images-eu.ssl-images-amazon.com/images/I/41xyIeqg8mL._SX300_SY300_QL70_FMwebp_.jpg",
+          "available": "true",
+          "qty": 2
+        }
+      ],
+      "id": 4
+    }
   ],
-  "CurrentLoggedInUser": [],
   "Users": [
     {
       "name": "Shiva Kumar Reddy Gaddam",
@@ -1093,7 +1127,32 @@
       "email": "naruto@gmail.com",
       "username": "naruto.65",
       "password": "narutoworld",
-      "cart": [],
+      "cart": [
+        {
+          "id": 108,
+          "pid": 3,
+          "category": "Laptops",
+          "name": "Lenovo Legion 5 AMD Ryzen 7 5800H 15.6inch VIDIA RTX 3060/165Hz/Windows 11/Office 2021/RGB Backlit/3months Game Pass/Phantom Blue/2.4Kg)",
+          "price": 89000,
+          "mrp": 99999,
+          "origin": "",
+          "img": "https://m.media-amazon.com/images/I/61Er61SxBhL._SX522_.jpg",
+          "available": "true",
+          "qty": 1
+        },
+        {
+          "id": 109,
+          "pid": 4,
+          "category": "Laptops",
+          "name": "Acer Nitro 5 Amd Ryzen 7 5800H/15.6 Inches Fhd Ips Display Gaming Laptop (16 Gb/256 Gb Ssd/1Tb Hdd/Windows 10 Home/6 Gb Graphics/Nvidia Geforce Rtx 3060/144 Hz,Shale Black, 2.4 Kg)",
+          "price": 82000,
+          "mrp": 98000,
+          "origin": "",
+          "img": "https://images-eu.ssl-images-amazon.com/images/I/41xyIeqg8mL._SX300_SY300_QL70_FMwebp_.jpg",
+          "available": "true",
+          "qty": 2
+        }
+      ],
       "id": 4
     },
     {

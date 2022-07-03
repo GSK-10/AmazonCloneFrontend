@@ -64,6 +64,7 @@ import EachProduct from '../EachProduct.js/EachProduct';
 
 import icon from '../../Images/logo.png'
 import icon1 from '../../Images/headPart.jpg'
+import Swal from 'sweetalert2'
 
 function Header() {
 
@@ -107,15 +108,25 @@ function Header() {
     }
 
     const emptyCartItems = async () => {
+
         let cartitems = await axios.get("http://localhost:8090/Cart");
+
         if (loggedInUser[0].cart.length === 0) {
             let data = { ...loggedInUser[0], cart: cartitems.data }
             let response = await axios.put(`http://localhost:8090/Users/${loggedInUser[0].id}`, data);
             console.log(response)
         }
-        
-        console.log(cartitems)
-        cartitems.data.map((element) => {
+        else{
+            let data = {...loggedInUser[0], cart: [] }
+            let response1 = await axios.put(`http://localhost:8090/Users/${loggedInUser[0].id}`, data);
+
+            let data1 = {...loggedInUser[0], cart: cartitems.data}
+            let response2 = await axios.put(`http://localhost:8090/Users/${loggedInUser[0].id}`, data1);
+
+        }
+        let cartitems1 = await axios.get("http://localhost:8090/Cart");
+        console.log(cartitems1)
+        cartitems1.data.map((element) => {
             console.log(element)
             removeItem(element.id);
         })
@@ -126,9 +137,23 @@ function Header() {
     const logOut = async () => {
         let response = await axios.get("http://localhost:8090/CurrentLoggedInUser")
         emptyCartItems();
+
         let logoutUser = await axios.delete(`http://localhost:8090/CurrentLoggedInUser/${response.data[0].id}`);
         navigate('/');
-        window.location.reload();
+        Swal.fire({
+            title: 'Logged out',
+            text: '',
+            icon: 'success',
+            iconColor: '#FF0000',
+            confirmButtonText: 'Close',
+            confirmButtonColor: 'Red',
+            timer: 1000
+          })
+          // reload();
+          // window.location.reload()
+          setTimeout( () => {
+            window.location.reload()
+          }, 1500)
     }
 
 

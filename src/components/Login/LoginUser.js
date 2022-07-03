@@ -12,47 +12,69 @@ import Swal from 'sweetalert2'
 
 function LoginUser() {
 
-  // const navigate = useNavigate();
-  // const { register, handleSubmit, formState: { errors } } = useForm()
-  // const [users, setusers] = useState([]);
-  // const [data, setdata] = useState();
-
-  // const onFormSubmit = (userData) => {
-  //   let found = false;
-  //   setdata(userData)
-  //   console.log(users)
-  //   console.log(data)
-  //   users.map((user) => {
-  //     if (user.phoneno === userData.phoneno || user.email === userData.email) {
-
-  //       if(user.password === userData.password){
-  //         found = true;
-  //       }
-
-  //     }
-  //   })
-
-  // if (found === true) {
-  //   navigate('/user/login');
-  // }
-  // else {
-  //   navigate('/new-user/login')
-  // }
-  // }
-  // const getUsers = async () => {
-  //   let getUsers = await axios.get("http://localhost:8090/users");
-  //   let usersData = getUsers.data;
-  //   setusers(usersData);
-  //   // console.log(usersData)
-  // }
-  // useEffect(() => {
-  //   getUsers();
-  // }, [])
 
   const navigate = useNavigate();
   const [validation, setValidation] = useState(false);
   const [currUser, setCurrUser] = useState([])
   const { register, handleSubmit, formState: { errors } } = useForm()
+
+
+  const [usercart, setCart] = useState([]);
+
+  useEffect(() => {
+    fetchCartItems()
+  }, [])
+
+
+
+  const loop = async (product) => {
+    console.log(product)
+    await axios.post("http://localhost:8090/Cart", product);
+  }
+
+  const post = async (data) => {
+    let currentUser = await axios.get("http://localhost:8090/CurrentLoggedInUser")
+    console.log(data)
+
+    // let data2 = data;
+
+    data.map((product) => {
+      loop(product);
+    })
+    // console.log(Cart.data)
+  }
+
+
+  const postData1 = async (Data) => {
+
+    let cartItems = Data[0].cart;
+    console.log(cartItems.length)
+
+    if (cartItems.length > 0) {
+      post(cartItems);
+    }
+  }
+
+
+  const postDataToCart = async () => {
+    let currentUser = await axios.get("http://localhost:8090/CurrentLoggedInUser")
+    let Data = currentUser.data;
+    postData1(Data)
+  }
+
+
+  const fetchCartItems = async () => {
+    let response1 = await axios.get("http://localhost:8090/CurrentLoggedInUser")
+    let Data = response1.data;
+    // console.log(Data)
+
+    if (Data[0].cart.length > 0) {
+      postDataToCart();
+      // postData();
+    }
+    // sendCartItemsToUsersAccount();
+  }
+
 
   const postData = async (loginData) => {
     let response = await axios.post("http://localhost:8090/CurrentLoggedInUser", loginData)
@@ -69,6 +91,7 @@ function LoginUser() {
 
     let found = false;
     let found1 = false;
+
     let response = await axios.get("http://localhost:8090/Users");
 
     response.data.map((element) => {
@@ -92,14 +115,16 @@ function LoginUser() {
         title: '',
         text: 'Logged In',
         icon: 'success',
+        // iconColor: 'green',
         confirmButtonText: 'Okay',
-        timer: 2000
+        confirmButtonColor: '#90ee90',
+        timer: 1300
       })
       // reload();
       // window.location.reload()
-      setTimeout( () => {
+      setTimeout(() => {
         window.location.reload()
-      }, 2000)
+      }, 1500)
     }
     else if (found === true && found1 === false) {
       Swal.fire({
@@ -122,7 +147,7 @@ function LoginUser() {
 
   }
 
-  const onFormSubmit = async(loginData) => {
+  const onFormSubmit = async (loginData) => {
     // getData();
     let response = await axios.get("http://localhost:8090/CurrentLoggedInUser");
 

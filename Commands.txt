@@ -45,12 +45,14 @@ import {BrowserRouter} from 'react-router-dom';
 	GIT COMMANDS **************************
 	
 	first 
+	
+
 	git init
 
 	git remote add origin <url>
 		here origin is short name for <url>
-	git remove remove <shortname> 
-	git remove -v 
+	git remove remote <shortname> 
+	git remote -v 
 		to check to what it is connected
 
 
@@ -64,6 +66,15 @@ for checking --> git status
 
 	***************************************
 
+	ANIMATIONS
+		npm i aos --save
+
+	import Aos from "aos";
+	import "aos/dist/aos.css";
+
+	useEffect( () => {
+		Aos.init( { duration: 2000 } );
+	} , []);
 
 
 

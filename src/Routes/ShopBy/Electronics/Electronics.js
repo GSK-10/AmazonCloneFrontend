@@ -10,6 +10,9 @@ import "swiper/css/pagination";
 import { Pagination, Navigation } from "swiper";
 import { Link, Routes, Route, NavLink } from 'react-router-dom'
 import './Electronics.css'
+
+import Aos from "aos";
+import "aos/dist/aos.css";
 // import './Electronics.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faIndianRupee } from '@fortawesome/free-solid-svg-icons';
@@ -154,6 +157,7 @@ function Electronics() {
                         }
 
                       </div>
+
                       <h6> </h6>
                     </div>
 

@@ -49,11 +49,6 @@ function Wishlist() {
     return (
         <>
 
-            {/* <div className='container border mt-4'>
-                <h4 className='me-auto '> Shopping List </h4>
-                <hr className='ms-2 me-2'></hr>
-                <ProductObj products={products} />
-            </div> */}
             <div className='me-3 ms-3 mb-5 p-0'>
 
                 <h3 className='mt-4 ms-4'> Wishlist </h3>
@@ -184,10 +179,10 @@ function Wishlist() {
 
 
 
-                <div className='container border mt-5'>
+                {/* <div className='container border mt-5'>
                     <h4 className='me-auto mb-4'> Gadgets </h4>
                     <hr className='ms-2 me-2'></hr>
-                    {/* <Slider products={products1} /> */}
+                   
                     <Swiper
                         style={{
                             "--swiper-navigation-color": "black",
@@ -280,7 +275,7 @@ function Wishlist() {
                                                 {data.price}.00 </p>
                                             <h6 className="ct card-title "> </h6>
 
-                                        </div> */}
+                                        </div> 
 
 
                                     </Link>
@@ -291,7 +286,7 @@ function Wishlist() {
                         }
 
                     </Swiper>
-                </div>
+                </div> */}
 
                 <Routes>
                     <Route path="/Item" element={<Item />} />

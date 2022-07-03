@@ -11,6 +11,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Pagination, Navigation } from "swiper";
 //-------------------------------------------------
+import Aos from "aos";
+import "aos/dist/aos.css";
+
+
 import './Home.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faIndianRupee } from '@fortawesome/free-solid-svg-icons';
@@ -99,6 +103,10 @@ function Home() {
         fetchUsers()
     }, [])
 
+    useEffect( () => {
+		Aos.init( { duration: 2000 } );
+	} , []);
+
 
 
 
@@ -116,7 +124,7 @@ function Home() {
             <div className='display me-3 ms-3 mb-5'>
 
                 {/* slider - 1 */}
-                <div className='bg-white '>
+                <div data-aos="fade-up" className='bg-white'>
 
                     <h4 className='me-auto mb-4 mt-3 headings'> Electronics </h4>
                     <Swiper
@@ -173,8 +181,30 @@ function Home() {
                     </Swiper>
                 </div>
 
+
+                <div data-aos="fade-up" className='bg-white' style={{ backgroundColor: "" }}>
+                    <Swiper
+                        style={{
+                            "--swiper-navigation-color": "black",
+                        }}
+                        slidesPerView={"auto"}
+                        spaceBetween={30}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        modules={[Pagination]}
+                        className="mySwiper mb-5"
+                    >
+                        <SwiperSlide>
+                            <img src="https://images-na.ssl-images-amazon.com/images/G/31/img22/Laptops/May/BAU/Hero/D45173604_IN_PC-Laptops-MAY-Samsung_1500x300._CB621451921_.jpg" alt="" className='img1 img-fluid rounded card-img-top p-4' />
+                        </SwiperSlide>
+
+                    </Swiper>
+                </div>
+
+
                 {/* slider - 2 */}
-                <div className='bg-white '>
+                <div data-aos="fade-up" className='bg-white '>
 
                     <h4 className='me-auto mb-4 mt-3 headings'> Fashion </h4>
                     <Swiper
@@ -233,33 +263,28 @@ function Home() {
                 </div>
 
 
-
-                <div className='' style={{ backgroundColor:"#eaeded !important"}}>
+                <div data-aos="fade-up" className='bg-white' style={{ backgroundColor: "" }}>
                     <Swiper
+                        style={{
+                            "--swiper-navigation-color": "black",
+                        }}
                         slidesPerView={"auto"}
                         spaceBetween={30}
                         pagination={{
                             clickable: true,
                         }}
                         modules={[Pagination]}
-                        className="mySwiper"
+                        className="mySwiper mb-5"
                     >
                         <SwiperSlide>
-                        <img src="https://images-na.ssl-images-amazon.com/images/G/31/img22/Fashion/Event/EOSS/AFpage/afscrolls/hindi/pc/4_2._SX3000_QL85_.jpg" alt="" className='img1 img-fluid rounded card-img-top p-4' />
+                            <img src="https://images-na.ssl-images-amazon.com/images/G/31/img22/Fashion/Event/MFS_July26/afpage/topbanners/3._SX3000_QL85_.jpg" alt="" className='img1 img-fluid rounded card-img-top p-4' />
                         </SwiperSlide>
-                        {/* <SwiperSlide>
-                        <img src="https://images-na.ssl-images-amazon.com/images/G/31/img22/Fashion/Event/EOSS/AFpage/afscrolls/hindi/pc/4_2._SX3000_QL85_.jpg" alt="" className='img1 img-fluid rounded card-img-top p-4' />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                        <img src="https://images-na.ssl-images-amazon.com/images/G/31/img22/Fashion/Event/EOSS/AFpage/afscrolls/hindi/pc/4_2._SX3000_QL85_.jpg" alt="" className='img1 img-fluid rounded card-img-top p-4' />
-                        </SwiperSlide> */}
+
                     </Swiper>
                 </div>
 
-
-
                 {/* slider - 3 */}
-                <div className='bg-white '>
+                <div data-aos="fade-up"  className='bg-white '>
 
                     <h4 className='me-auto mb-4 mt-3 headings'> Home and Kitchen </h4>
                     <Swiper
@@ -317,9 +342,29 @@ function Home() {
                     </Swiper>
                 </div>
 
+                <div data-aos="fade-up" className='bg-white mt-0' style={{ backgroundColor: "" }}>
+                    <Swiper
+                        style={{
+                            "--swiper-navigation-color": "black",
+                        }}
+                        slidesPerView={"auto"}
+                        spaceBetween={30}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        modules={[Pagination]}
+                        className="mySwiper mb-5"
+                    >
+                        <SwiperSlide>
+                            <img src="https://images-na.ssl-images-amazon.com/images/G/31/IMG19/Furniture/WFH/Header/WFH_1500x350._CB409247456_.gif" alt="" className='img1 img-fluid rounded card-img-top p-4' />
+                        </SwiperSlide>
+
+                    </Swiper>
+                </div>
+
 
                 {/* slider - 4 */}
-                <div className='bg-white '>
+                <div  data-aos="fade-up" className='bg-white '>
 
                     <h4 className='me-auto mb-4 mt-3 headings'> Beauty and Health </h4>
                     <Swiper
@@ -372,7 +417,7 @@ function Home() {
 
 
                 {/* slider - 5 */}
-                <div className='bg-white '>
+                <div data-aos="fade-up" className='bg-white '>
 
                     <h4 className='me-auto mb-4 mt-3 headings'> Sports, Fitness & Outdoor </h4>
                     <Swiper
@@ -426,7 +471,7 @@ function Home() {
 
 
                 {/* slider - 6 */}
-                <div className='bg-white '>
+                <div data-aos="fade-up" className='bg-white '>
 
                     <h4 className='me-auto mb-4 mt-3 headings'> Music </h4>
                     <Swiper
