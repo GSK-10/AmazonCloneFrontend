@@ -138,6 +138,10 @@
       "price": 0
     }
   ],
+
+
+
+
   "WishLists": [
     {
       "id": 1,
@@ -422,7 +426,10 @@
       "id": 40
     }
   ],
-  "NewReleases": [],
+  "NewReleases": [
+
+  ],
+  
   "Display": [
     {
       "id": 61,
@@ -542,7 +549,7 @@
       "price": 0,
       "mrp": 0,
       "origin": "india",
-      "img": "https://images-na.ssl-images-amazon.com/images/G/31/img22/Fashion/Event/EOSS/AFpage/halos/3._SS300_QL85_.png",
+      "img": "https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/G/31/img22/Fashion/Event/Autumnwinter/halo/Beauty._SS300_QL85_.jpg",
       "available": "true"
     },
     {
@@ -553,7 +560,7 @@
       "price": 0,
       "mrp": 0,
       "origin": "",
-      "img": "https://images-na.ssl-images-amazon.com/images/G/31/img22/Fashion/Event/EOSS/AFpage/halos/4._SS300_QL85_.png",
+      "img": "https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/G/31/img22/Fashion/Event/Autumnwinter/halo/Footwear._SS300_QL85_.jpg",
       "available": "true"
     },
     {
@@ -564,7 +571,7 @@
       "price": 0,
       "mrp": 0,
       "origin": "",
-      "img": "https://images-na.ssl-images-amazon.com/images/G/31/img22/Fashion/Event/EOSS/AFpage/halos/5._SS300_QL85_.png",
+      "img": "https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/G/31/img22/Fashion/Event/Autumnwinter/halo/Luggage--backpack._SS300_QL85_.jpg",
       "available": "true"
     },
     {
@@ -575,7 +582,7 @@
       "price": 0,
       "mrp": 0,
       "origin": "",
-      "img": "https://images-na.ssl-images-amazon.com/images/G/31/img22/Fashion/Event/EOSS/AFpage/halos/6._SS300_QL85_.png",
+      "img": "https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/G/31/img22/Fashion/Event/Autumnwinter/halo/Jewellery._SS300_QL85_.jpg",
       "available": "true"
     },
     {
@@ -586,7 +593,7 @@
       "price": 0,
       "mrp": 0,
       "origin": "india",
-      "img": "https://images-na.ssl-images-amazon.com/images/G/31/img22/Fashion/Event/EOSS/AFpage/halos/8._SS300_QL85_.png",
+      "img": "https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/G/31/img22/Fashion/Event/Autumnwinter/halo/Handbags._SS300_QL85_.jpg",
       "available": "true"
     },
     {
@@ -597,7 +604,7 @@
       "price": 0,
       "mrp": 0,
       "origin": "",
-      "img": "https://images-na.ssl-images-amazon.com/images/G/31/img22/Fashion/Event/EOSS/AFpage/halos/12._SS300_QL85_.png",
+      "img": "https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/G/31/img22/Fashion/Event/Autumnwinter/halo/Kids-Fashion._SS300_QL85_.jpg",
       "available": "true"
     },
     {
@@ -608,7 +615,7 @@
       "price": 0,
       "mrp": 0,
       "origin": "india",
-      "img": "https://images-na.ssl-images-amazon.com/images/G/31/img22/Fashion/Event/EOSS/AFpage/halos/9._SS300_QL85_.png",
+      "img": "https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/G/31/img22/Fashion/Event/Autumnwinter/halo/Sunglasses--frames._SS300_QL85_.jpg",
       "available": "true"
     },
     {
@@ -619,7 +626,7 @@
       "price": 0,
       "mrp": 0,
       "origin": "",
-      "img": "https://images-na.ssl-images-amazon.com/images/G/31/img22/Fashion/Event/EOSS/AFpage/halos/1._SS300_QL85_.png",
+      "img": "https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/G/31/img22/Fashion/Event/Autumnwinter/halo/Mens-Clothing._SS300_QL85_.jpg",
       "available": "true"
     },
     {
@@ -630,7 +637,7 @@
       "price": 0,
       "mrp": 0,
       "origin": "",
-      "img": "https://images-na.ssl-images-amazon.com/images/G/31/img22/Fashion/Event/EOSS/AFpage/halos/2._SS300_QL85_.png",
+      "img": "https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/G/31/img22/Fashion/Event/Autumnwinter/halo/Womens-Clothing._SS300_QL85_.jpg",
       "available": "true"
     },
     {
@@ -641,7 +648,7 @@
       "price": 0,
       "mrp": 0,
       "origin": "",
-      "img": "https://images-na.ssl-images-amazon.com/images/G/31/img22/Fashion/Event/EOSS/AFpage/halos/7._SS300_QL85_.png",
+      "img": "https://images-na.ssl-images-amazon.com/images/W/WEBP_402378-T2/images/G/31/img22/Fashion/Event/Autumnwinter/halo/Watches._SS300_QL85_.jpg",
       "available": "true"
     },
     {
@@ -1065,68 +1072,8 @@
   "Gifts": [],
   "Recharge": [],
   "AmazonPay": [],
-  "Cart": [
-    {
-      "id": 112,
-      "pid": 1,
-      "category": "Desktops",
-      "name": "HP All in One 27-inch (68.6 cm) FHD Desktop PC 4th Gen Ryzen 5 4500U Processor (8GB/512GB SSD/Facial Recognition IR Camera/Windows 10/MS Office 2019/Alexa Built-in), 27-dp0555in, Silver",
-      "price": 66900,
-      "mrp": 79000,
-      "origin": "",
-      "img": "https://m.media-amazon.com/images/I/61aGQ9d2fOS._SX466_.jpg",
-      "available": "true",
-      "qty": 1
-    },
-    {
-      "id": 109,
-      "pid": 4,
-      "category": "Laptops",
-      "name": "Acer Nitro 5 Amd Ryzen 7 5800H/15.6 Inches Fhd Ips Display Gaming Laptop (16 Gb/256 Gb Ssd/1Tb Hdd/Windows 10 Home/6 Gb Graphics/Nvidia Geforce Rtx 3060/144 Hz,Shale Black, 2.4 Kg)",
-      "price": 82000,
-      "mrp": 98000,
-      "origin": "",
-      "img": "https://images-eu.ssl-images-amazon.com/images/I/41xyIeqg8mL._SX300_SY300_QL70_FMwebp_.jpg",
-      "available": "true",
-      "qty": 2
-    }
-  ],
-  "CurrentLoggedInUser": [
-    {
-      "name": "naruto",
-      "phoneno": "99988776655",
-      "email": "naruto@gmail.com",
-      "username": "naruto.65",
-      "password": "narutoworld",
-      "cart": [
-        {
-          "id": 112,
-          "pid": 1,
-          "category": "Desktops",
-          "name": "HP All in One 27-inch (68.6 cm) FHD Desktop PC 4th Gen Ryzen 5 4500U Processor (8GB/512GB SSD/Facial Recognition IR Camera/Windows 10/MS Office 2019/Alexa Built-in), 27-dp0555in, Silver",
-          "price": 66900,
-          "mrp": 79000,
-          "origin": "",
-          "img": "https://m.media-amazon.com/images/I/61aGQ9d2fOS._SX466_.jpg",
-          "available": "true",
-          "qty": 1
-        },
-        {
-          "id": 109,
-          "pid": 4,
-          "category": "Laptops",
-          "name": "Acer Nitro 5 Amd Ryzen 7 5800H/15.6 Inches Fhd Ips Display Gaming Laptop (16 Gb/256 Gb Ssd/1Tb Hdd/Windows 10 Home/6 Gb Graphics/Nvidia Geforce Rtx 3060/144 Hz,Shale Black, 2.4 Kg)",
-          "price": 82000,
-          "mrp": 98000,
-          "origin": "",
-          "img": "https://images-eu.ssl-images-amazon.com/images/I/41xyIeqg8mL._SX300_SY300_QL70_FMwebp_.jpg",
-          "available": "true",
-          "qty": 2
-        }
-      ],
-      "id": 4
-    }
-  ],
+  "Cart": [],
+  "CurrentLoggedInUser": [],
   "Users": [
     {
       "name": "Shiva Kumar Reddy Gaddam",
@@ -1152,32 +1099,7 @@
       "email": "naruto@gmail.com",
       "username": "naruto.65",
       "password": "narutoworld",
-      "cart": [
-        {
-          "id": 112,
-          "pid": 1,
-          "category": "Desktops",
-          "name": "HP All in One 27-inch (68.6 cm) FHD Desktop PC 4th Gen Ryzen 5 4500U Processor (8GB/512GB SSD/Facial Recognition IR Camera/Windows 10/MS Office 2019/Alexa Built-in), 27-dp0555in, Silver",
-          "price": 66900,
-          "mrp": 79000,
-          "origin": "",
-          "img": "https://m.media-amazon.com/images/I/61aGQ9d2fOS._SX466_.jpg",
-          "available": "true",
-          "qty": 1
-        },
-        {
-          "id": 109,
-          "pid": 4,
-          "category": "Laptops",
-          "name": "Acer Nitro 5 Amd Ryzen 7 5800H/15.6 Inches Fhd Ips Display Gaming Laptop (16 Gb/256 Gb Ssd/1Tb Hdd/Windows 10 Home/6 Gb Graphics/Nvidia Geforce Rtx 3060/144 Hz,Shale Black, 2.4 Kg)",
-          "price": 82000,
-          "mrp": 98000,
-          "origin": "",
-          "img": "https://images-eu.ssl-images-amazon.com/images/I/41xyIeqg8mL._SX300_SY300_QL70_FMwebp_.jpg",
-          "available": "true",
-          "qty": 2
-        }
-      ],
+      "cart": [],
       "id": 4
     },
     {

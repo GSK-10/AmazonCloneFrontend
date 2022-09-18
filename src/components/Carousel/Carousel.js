@@ -25,7 +25,7 @@ function ControlledCarousel() {
                 <Carousel.Item>
                     <img
                         className="d-block w-100 image"
-                        src= {Image1}
+                        src= {Image5}
                         alt="First slide"
                     />
                     {/* <Carousel.Caption>
@@ -62,7 +62,7 @@ function ControlledCarousel() {
                 <Carousel.Item>
                     <img
                         className="d-block w-100 image"
-                        src={Image5}
+                        src={Image1}
                         alt="Fifth slide"
                     />
                 </Carousel.Item>
